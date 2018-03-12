@@ -1,0 +1,49 @@
+<html>
+ <style>
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+  </style>
+  <div style="width:800px;height:400px">
+    <strong>The below chart shows percentage mismatch of Angles in various cities </strong>
+<canvas id="angles" ></canvas>
+    <strong>The below chart shows Routing Boundary match percentage (TODO)</strong>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.2/dist/Chart.bundle.min.js"></script>
+
+<script>
+function generateGraph(key) {
+    var ctx = document.getElementById(key);
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: <%- JSON.stringify(graph.labels) %>,
+            datasets: [{
+                label: <%- JSON.stringify(graph.title) %>,
+                data: <%- JSON.stringify(graph.data) %>,
+              	backgroundColor: <%- JSON.stringify(graph.backgroundColor) %>,
+                 
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            }
+        }
+    });
+}
+
+generateGraph('angles'); 
+
+</script>
+<body>
+</body>
+</html>

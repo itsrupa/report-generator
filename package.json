@@ -1,0 +1,23 @@
+{
+  "name": "rupamaiya",
+  "version": "1.0.0",
+  "description": "Generate Director friendly report",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "report",
+    "generator",
+    "log",
+    "parser"
+  ],
+  "author": "Rupa Maiya",
+  "license": "MIT",
+  "dependencies": {
+    "chart.js": "^2.7.2",
+    "ejs": "^2.5.7",
+    "ejs-html": "^5.1.5",
+    "line-by-line": "^0.1.6"
+  }
+}

@@ -1,0 +1,49 @@
+<html>
+ <style>
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+  </style>
+  <div style="width:800px;height:400px">
+    <strong>The below chart shows percentage mismatch of Angles in various cities </strong>
+<canvas id="angles" ></canvas>
+    <strong>The below chart shows Routing Boundary match percentage (TODO)</strong>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.2/dist/Chart.bundle.min.js"></script>
+
+<script>
+function generateGraph(key) {
+    var ctx = document.getElementById(key);
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ["austin","atlanta","seoul","south_korea","chicago","houston","dallas","bay","san_diego","la","seattle","taipei","taiwan","uae","jordan"],
+            datasets: [{
+                label: "% Mismatch (Angles)",
+                data: [1.74,1.16,3.51,5.47,1.52,1.45,2.2,1.49,1,1.45,0.78,5.46,4.29,2.54,9.41],
+              	backgroundColor: ["rgba(255, 99, 132, 0.2)","rgba(255, 99, 132, 0.2)","rgba(255, 99, 132, 0.2)","rgba(255, 99, 132, 0.2)","rgba(255, 99, 132, 0.2)","rgba(255, 99, 132, 0.2)","rgba(255, 99, 132, 0.2)","rgba(255, 99, 132, 0.2)","rgba(255, 99, 132, 0.2)","rgba(255, 99, 132, 0.2)","rgba(255, 99, 132, 0.2)","rgba(255, 99, 132, 0.2)","rgba(255, 99, 132, 0.2)","rgba(255, 99, 132, 0.2)","rgba(255, 99, 132, 0.2)"],
+                 
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            }
+        }
+    });
+}
+
+generateGraph('angles'); 
+
+</script>
+<body>
+</body>
+</html>
