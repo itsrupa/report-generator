@@ -1,3 +1,7 @@
+# Screenshot
+
+<img src="https://github.com/itsrupa/report-generator/blob/master/report-screenshot.png?raw=true" />
+
 # report generator
 
 I have created a sample summary report for "Angles" log. I could not complete it for all the different types of logs (for routing, guidance and so on). But I'll follow similar principles for them as described below.
@@ -18,6 +22,3 @@ I have created a sample summary report for "Angles" log. I could not complete it
 
 This will generate a *report.html* HTML by parsing the log file. 
 
-# Screenshot
-
-<img src="https://github.com/itsrupa/report-generator/blob/master/report-screenshot.png?raw=true" />
